@@ -13,7 +13,6 @@ public class MemberApp {
         //스프링 컨터이너에 AppConfig 설정정보를 넣는다.
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         MemberServiceImpl memberService = ac.getBean("memberService", MemberServiceImpl.class);
-
 //        AppConfig appConfig = new AppConfig();
 //        MemberService memberService = appConfig.memberService();
 

@@ -19,6 +19,9 @@ public class AppConfig {
 
     /**
      * 반환된 객체들은 스프링 빈이라고 한다.
+     * {
+     *     메서드 명(key): 반환 객체(value)
+     * }
      * @return Spring Bean
      */
 
