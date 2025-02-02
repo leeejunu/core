@@ -1,5 +1,9 @@
 package spring.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService{
 
     /**
@@ -16,6 +20,7 @@ public class MemberServiceImpl implements MemberService{
      * 클라이언트 쪽에서 원하는 구현 클래스를 주입하게 되면
      * MemberServiceImpl는 구현 클래스를 의존하지 않을 수 있다.
      */
+    @Autowired
     public MemberServiceImpl(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
