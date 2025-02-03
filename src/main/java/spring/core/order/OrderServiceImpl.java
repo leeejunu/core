@@ -1,6 +1,7 @@
 package spring.core.order;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import spring.core.discount.DiscountPolicy;
 
@@ -11,10 +12,14 @@ import spring.core.member.MemberRepository;
 public class OrderServiceImpl implements OrderService{
 
     private final MemberRepository memberRepository;
+
+    /**
+     * DiscountPolicy 타입의 스프링 빈이 2개 이상일 때 필드명으로 지정하여 주입이 가능함
+     * fixDiscountPolicy와 rateDiscountPolicy
+     */
     private final DiscountPolicy discountPolicy;
 
-    @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }

@@ -1,5 +1,6 @@
 package spring.core.member;
 
+import lombok.Getter;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 
@@ -7,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Component
+@Getter
 public class MemoryMemberRepositoryImpl implements MemberRepository{
 
     /**

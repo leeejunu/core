@@ -24,7 +24,6 @@ public class AppConfig {
      * }
      * @return Spring Bean
      */
-
     @Bean
     public MemberService memberService() {
         return new MemberServiceImpl(memberRepository());
