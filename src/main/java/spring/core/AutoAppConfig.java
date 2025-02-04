@@ -10,8 +10,7 @@ import org.springframework.context.annotation.FilterType;
  * AutoAppConfig의 위치 package spring.core 하위는 다 뒤진다.
  */
 @ComponentScan(
-        basePackages = "spring.core.member",
-        basePackageClasses = AutoAppConfig.class,
+        basePackages = "spring.core",
         excludeFilters = @ComponentScan.Filter(type = FilterType.ANNOTATION, classes = Configuration.class)
 )
 @Configuration

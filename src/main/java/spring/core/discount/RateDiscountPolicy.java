@@ -6,7 +6,6 @@ import spring.core.member.Grade;
 import spring.core.member.Member;
 
 @Component
-//@Qualifier("mainDiscountPolicy")
 public class RateDiscountPolicy implements DiscountPolicy{
 
     private int discountPercent = 10;

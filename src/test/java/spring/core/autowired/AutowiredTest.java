@@ -20,7 +20,6 @@ public class AutowiredTest {
 
     @Component
     static class TestBean {
-
         /**
          * 관련된 bean이 없다면 메서드 호출을 하지 않는다.
          */

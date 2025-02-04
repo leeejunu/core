@@ -2,7 +2,9 @@ package spring.core.order;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
+import spring.core.annotation.MainDiscountPolicy;
 import spring.core.discount.DiscountPolicy;
 
 import spring.core.member.Member;
@@ -19,7 +21,7 @@ public class OrderServiceImpl implements OrderService{
      */
     private final DiscountPolicy discountPolicy;
 
-    public OrderServiceImpl(MemberRepository memberRepository, @Qualifier("mainDiscountPolicy") DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
