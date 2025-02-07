@@ -32,6 +32,11 @@ public class NetworkClient {
         System.out.println("close: " + url);
     }
 
+    /**
+     * 의존성 주입이 완료된 후에 실행되어야하는 method에 사용
+     * 해당 어노테이션은 다른 리소스에서 호출되지 않아도 수행
+     * 생성자보다 늦게 후철
+     */
     @PostConstruct
     public void init() {
         System.out.println("NetworkClient.init");
