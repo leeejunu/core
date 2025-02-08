@@ -58,6 +58,7 @@ public class SingletonWithPrototypeTest1 {
 //            return prototypeBean.getCnt();
 
             PrototypeBean prototypeBean = provider.get();
+            return prototypeBean.getCnt();
         }
     }
 
